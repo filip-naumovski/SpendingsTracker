@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "462114955670",
+    "project_id": "spendingstracker-78ffc",
+    "storage_bucket": "spendingstracker-78ffc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462114955670:android:5250ddce1ba3d67f4b3db7",
+        "android_client_info": {
+          "package_name": "com.android.spendingstracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462114955670-ivi3kd0tmnitcjugab7ed6js2m1mfjn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAonN_cxvf2DMY8DGDcbYZZYIWtf9nbPhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462114955670-ivi3kd0tmnitcjugab7ed6js2m1mfjn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivity"
+    android:background="@drawable/intro_background">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <TextView
+            android:id="@+id/introWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello!"
+            android:textSize="50sp"
+            android:fontFamily="@font/lexend_deca"
+            android:textFontWeight="800"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/introWelcomeSubMessage"
+            android:layout_width="wrap_content"
+            android:text="Since this is your first time logging in, let's set up your account!"
+            android:layout_height="150dp"
+            android:textSize="25sp"
+            android:fontFamily="@font/lexend_deca"
+            android:textFontWeight="600"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/introWelcome"
+            />
+
+        <TextView
+            android:id="@+id/introWelcomeSubMessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:fontFamily="@font/lexend_deca"
+            android:text="First off, please enter your total (net) monthly income and fixed monthly expenses in the fields below."
+            android:textAlignment="center"
+            android:textFontWeight="600"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/introWelcomeSubMessage" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/introIncomeLayout"
+            android:layout_width="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:hint="Income (in USD)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/introWelcomeSubMessage2"
+>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/introIncome"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/introExpensesLayout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Expenses (in USD)"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/introIncomeLayout"
+            app:layout_constraintBottom_toBottomOf="@id/introIncomeLayout"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/introExpenses"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/introSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:text="Submit"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/introIncomeLayout"
+            android:onClick="handleIntroSubmit"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
